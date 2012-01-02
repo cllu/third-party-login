@@ -1,0 +1,30 @@
+<html>
+<head>
+  <title>Third-Party Login Demo</title>
+  <script type="text/javascript">
+    var interval;
+    function signin(from){
+    signin_window = window.open("/"+from, "signin_window", "status=1,width=350,height=350");
+    interval = window.setInterval("checkSigninWindow()",200);
+    }
+    function checkSigninWindow(){
+    if(true == signin_window.closed){
+    window.clearInterval(interval);
+    //alert("signin window closed");
+    location.reload(true);
+    }
+    }
+  </script>
+</head>
+<body>
+  <h1>Third-Party Login Demo Page</h1>
+  <a href="javascript:signin('google')">Sign in with Google</a><br/>
+  <a href="javascript:signin('weibo')">Sign in with Weibo</a><br/>
+  <a href="javascript:signin('twitter')">Sign in with Twitter</a><br/>
+  <a href="javascript:signin('qq')">Sign in with QQ</a><br/>
+  <br/>
+  {% if user %}
+  You have logged as {{ user.name }} from {{ user.from }}.
+  {% endif %}
+</body>
+</html>

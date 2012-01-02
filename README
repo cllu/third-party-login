@@ -1,0 +1,27 @@
+Third-Party Login Demo
+======================
+
+This is a simple demo app to illustrate login with oauth v1/v2 on
+appengine. It is not hard to implement all by oneself, but due to the
+insufficient/not-up-to-date documentation, it may become a headache.
+
+To use third-party login, you need to register your website on the
+corresponding service provider.
+
+
+- Weibo 
+  Application Page: http://open.weibo.com/apps
+  You need to verify your domain
+
+- QQ
+  Application Page: http://connect.opensns.qq.com/
+  No need to verify your domain
+
+- Google
+  Application Page: https://code.google.com/apis/console
+  No need to verify your domain.
+
+- Twitter 
+  Application Page: https://dev.twitter.com/apps/new
+  No need to verify your domain
+
